@@ -1,0 +1,21 @@
+Ship ID,Ship Name,Image Path,Last Known Location,Latitude,Longitude,Country,Next Latitude,Next Longitude
+1,Poseidon,images/poseidon.jpg,Atlantic Ocean,12.34,-45.67,USA,12.50,-45.80
+2,Titanic,images/titanic.jpg,Pacific Ocean,32.54,-123.45,UK,32.60,-123.50
+3,Mariner,images/mariner.jpg,Indian Ocean,19.34,72.87,India,19.40,72.90
+4,Odyssey,images/odyssey.jpg,Arctic Ocean,78.22,15.62,Norway,78.30,15.70
+5,Voyager,images/voyager.jpg,Mediterranean Sea,36.87,14.30,Italy,36.90,14.35
+6,Explorer,images/explorer.jpg,South China Sea,10.45,114.11,China,10.50,114.20
+7,Seafarer,images/seafarer.jpg,Gulf of Mexico,25.67,-90.45,Mexico,25.70,-90.50
+8,Navigator,images/navigator.jpg,Black Sea,44.56,34.34,Russia,44.60,34.40
+9,Adventurer,images/adventurer.jpg,Baltic Sea,55.68,12.57,Denmark,55.70,12.60
+10,Pioneer,images/pioneer.jpg,Red Sea,20.12,38.30,Egypt,20.20,38.40
+11,Endeavour,images/endeavour.jpg,Caribbean Sea,18.20,-68.42,Jamaica,18.30,-68.50
+12,Discovery,images/discovery.jpg,North Sea,59.45,1.45,UK,59.50,1.50
+13,Challenger,images/challenger.jpg,Coral Sea,-15.45,146.87,Australia,-15.40,146.90
+14,Pathfinder,images/pathfinder.jpg,Arabian Sea,16.95,72.70,India,17.00,72.80
+15,Atlas,images/atlas.jpg,Yellow Sea,37.45,122.87,China,37.50,122.90
+16,Horizon,images/horizon.jpg,Caspian Sea,41.22,52.43,Kazakhstan,41.30,52.50
+17,Legacy,images/legacy.jpg,Gulf of Aden,12.45,45.10,Somalia,12.50,45.20
+18,Guardian,images/guardian.jpg,Bay of Bengal,15.30,88.00,Bangladesh,15.40,88.10
+19,Victory,images/victory.jpg,Sea of Japan,35.45,135.87,Japan,35.50,135.90
+20,Freedom,images/freedom.jpg,South Pacific Ocean,-20.87,-175.20,Fiji,-20.80,-175.10

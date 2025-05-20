@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coastguard Search Assistance</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <style>
+        /* General Body Style */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f7fa;
+            display: flex;
+        }
+
+        /* Sidebar Style */
+        .sidebar {
+            width: 250px;
+            background-color: #ffffff;
+            height: 100vh;
+            position: fixed;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sidebar .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            text-align: center;
+            padding: 1rem 0;
+            border-bottom: 1px solid #ddd;
+            color: #333;
+        }
+
+        .sidebar nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar nav ul li {
+            border-bottom: 1px solid #ddd;
+        }
+
+        .sidebar nav ul li a {
+            display: flex;
+            align-items: center;
+            padding: 0.75rem 1rem;
+            color: #333;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .sidebar nav ul li a:hover {
+            background-color: #007BFF;
+            color: white;
+        }
+
+        .sidebar nav ul li a span {
+            margin-right: 1rem;
+            font-size: 1.2em;
+        }
+
+        /* Main Content Style */
+        .content {
+            margin-left: 250px;
+            padding: 20px;
+            flex: 1;
+        }
+
+        header {
+            text-align: center;
+            padding: 2rem;
+            background-color: #007BFF;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        .search-section form {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .search-section input {
+            padding: 10px;
+            font-size: 1rem;
+            margin-right: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            flex: 0.7;
+        }
+
+        .search-section button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .search-section button:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #f1f1f1;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo">
+            <span>🔍</span> Coastguard
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/"><span>🏠</span> Dashboard</a></li>
+                <li><a href="/category"><span>📂</span> Category</a></li>
+                <li><a href="/ships"><span>🚢</span> Ships</a></li>
+                <li><a href="/analytics"><span>📊</span> Analytics</a></li>
+                <li><a href="/settings"><span>⚙️</span> Settings</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="content">
+        <header>
+            <h1>Coastguard Search Assistance</h1>
+            <p>Locate missing ships with ease – Powered by Machine Learning</p>
+        </header>
+        <div class="search-section">
+            <form action="/" method="POST">
+                <input type="text" name="ship_id" placeholder="Enter Ship ID" required>
+                <button type="submit">Find Ship</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Coastguard Assistance. All rights reserved.</p>
+    </footer>
+</body>
+</html>

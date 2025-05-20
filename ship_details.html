@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ship Details</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Ship Details</h1>
+    </header>
+    <main>
+        <div class="ship-info">
+            <h2>{{ ship["Ship Name"] }}</h2>
+            <div class="image-container">
+                <img src="/static/{{ ship['Image Path'] }}" alt="{{ ship['Ship Name'] }}">
+            </div>
+            <p><strong>Last Known Location:</strong> {{ ship["Last Known Location"] }}</p>
+            <p><strong>Country:</strong> {{ ship["Country"] }}</p>
+        </div>
+
+        <!-- Predicted Location -->
+        <div class="predicted-location">
+            <h3>Predicted Location</h3>
+            <p><strong>Latitude:</strong> {{ prediction.latitude }}</p>
+            <p><strong>Longitude:</strong> {{ prediction.longitude }}</p>
+        </div>
+
+        <!-- Weather Information -->
+        <div class="weather-info">
+            <h3>Weather at Predicted Location</h3>
+            <p><strong>Temperature:</strong> {{ weather.temperature }}°C</p>
+            <p><strong>Wind Speed:</strong> {{ weather.windspeed }} km/h</p>
+        </div>
+
+        <!-- Map displaying the predicted location -->
+        <div id="map" style="height: 400px;"></div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Coastguard Assistance. All rights reserved.</p>
+    </footer>
+    <script>
+        // Initialize the map with the predicted location
+        const map = L.map('map').setView([{{ prediction.latitude }}, {{ prediction.longitude }}], 6);
+
+        // Add a tile layer
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+        }).addTo(map);
+
+        // Add a marker at the predicted location
+        L.marker([{{ prediction.latitude }}, {{ prediction.longitude }}]).addTo(map)
+            .bindPopup("Predicted Location of {{ ship['Ship Name'] }}")
+            .openPopup();
+    </script>
+</body>
+</html>
